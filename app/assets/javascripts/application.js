@@ -14,4 +14,8 @@
 //= require rails-ujs
 //= require gritter 
 //= require turbolinks 
+<<<<<<< HEAD
+=======
+//= require materialize-sprockets
+>>>>>>> aa4650fc84d8cb884716d4058233528438d4c3fa
 //= require_tree .

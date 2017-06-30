@@ -1,1 +1,12 @@
+@import 'materialize';
 @import 'gritter';
+@import 'font-awesome';
+
+.nav-logo {
+	margin-left: 30px;
+	color: white;
+}
+
+.nav-logo i {
+	font-size: 40px;
+}

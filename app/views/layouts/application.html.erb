@@ -10,8 +10,22 @@
   <body>
       <%= link_to 'sign out', destroy_user_session_path %>
       <%= render 'shared/alerts' %>
+	  <nav>
+	    <div class="nav-wrapper">
+	      <a href="/" class="brand-logo left nav-logo"><i class="fa fa-magic" aria-hidden="true"></i></a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><%= link_to 'Lessons', lessons_path %></li>
+	        <li><%= link_to 'Achievements', pages_achievement_path %></li>
+	        <% if current_user %>
+	        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+	        <% else %>
+	        <li><%= link_to "Login", new_user_session_path %></li>
+	        <li><%= link_to "Register", new_user_registration_path %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	  </nav>
     <%= yield %>
     
   </body>
 </html>
-
