@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     end
   end
 
+  
+
   def achievement
   end
 end
