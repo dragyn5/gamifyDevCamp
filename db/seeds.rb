@@ -11,7 +11,8 @@ end
 3.times do |topic|
   User.create!(
     email: "test#{topic}@test.com",
-    password: "asdfasdf"
+    password: "asdfasdf",
+    xp: 0
   )
 end
 puts "3 Users created"
