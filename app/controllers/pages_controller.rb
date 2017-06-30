@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def welcome
     if user_signed_in?
-      @person = current_user
+      @user = current_user
     end
   end
 
