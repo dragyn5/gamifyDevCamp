@@ -32,13 +32,15 @@ class ApplicationController < ActionController::Base
     "click on every link" => 40,
     "download slack" => 5,
     "download screenhero" => 5 }
-    point = @achievements[params[:achievement]]
+    points = @achievements[params[:achievement]]
     if user_signed_in?
       @person = current_user
       if @person.xp == nil
         @person.xp = 0
       end
-      @person.update(xp: (@person.xp + point))
+         @person.update(xp: (@person.xp + points)) 
+        
+      
     end
   end
 
