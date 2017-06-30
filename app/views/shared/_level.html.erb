@@ -1,0 +1,23 @@
+<% if current_user %>
+  <% if @person.xp < 20 %>
+     lvl 1 Noob
+    <% elsif @person.xp < 100 %>
+     lvl 2 Amatuer
+    <% elsif @person.xp < 500 %>
+     lvl 3 Capable
+    <% elsif @person.xp < 1000 %>
+     lvl 4 Knowlegdable
+    <% elsif @person.xp < 1500 %>
+     lvl 5 Code Monkey
+    <% elsif @person.xp < 2000 %>
+     lvl 6 Veteran
+    <% elsif @person.xp < 3000 %>
+     lvl 7 Seasoned Veteran
+    <% elsif @person.xp < 5000 %>
+     lvl 8 Mentor
+    <% elsif @person.xp < 10000 %>
+     lvl 9 Coding Jedi                 
+    <% else %>
+     lvl 10 Jordan Hudgens    
+  <% end %>
+<% end %>

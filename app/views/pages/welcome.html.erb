@@ -1,11 +1,8 @@
 
-<a class="waves-effect waves-light btn">button</a>
-<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
-  <%= link_to "Register", new_user_registration_path %>
-  <%= link_to "Login", new_user_session_path %>
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% if current_user %>
-  <% point "Register" %>
-  <%= @user.xp %>
-<% end %>
+      <%= button_to  "ex", pages_point_path, method: :point, params: { 'achievement' => "click on every link" } %>
+
+
+
+
+
+<h1>Experience: <%= @person.xp if current_user %> </h1>

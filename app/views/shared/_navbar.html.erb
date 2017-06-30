@@ -1,0 +1,41 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo left nav-logo"><i class="fa fa-magic" aria-hidden="true"></i></a>
+
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+  <li><% if current_user %>
+    <% if current_user.xp < 20 %>
+     <div class="chip"> <img src="https://img0.etsystatic.com/001/0/5326218/il_570xN.390914856_eqxh.jpg">lvl 1 Noob</div>
+    <% elsif current_user.xp < 100 %>
+     <div class="chip"> <img src="https://img0.etsystatic.com/001/0/5326218/il_570xN.390914856_eqxh.jpg">lvl 2 Amatuer</div>
+    <% elsif current_user.xp < 500 %>
+     <div class="chip"> <img src="https://img0.etsystatic.com/001/0/5326218/il_570xN.390914856_eqxh.jpg">lvl 3 Capable</div>
+    <% elsif current_user.xp < 1000 %>
+     <div class="chip"> <img src="/../assets/Knowlegdable.jpg">lvl 4 Knowlegdable</div>
+    <% elsif current_user.xp < 1500 %>
+     <div class="chip"> <img src="/../assets/Knowlegdable.jpg">lvl 5 Code Monkey</div>
+    <% elsif current_user.xp < 2000 %>
+     <div class="chip"> <img src="/../assets/Mentor.jpg">lvl 6 Veteran</div>
+    <% elsif current_user.xp < 3000 %>
+     <div class="chip"> <img src="https://img0.etsystatic.com/001/0/5326218/il_570xN.390914856_eqxh.jpg">lvl 7 Seasoned Veteran</div>
+    <% elsif current_user.xp < 5000 %>
+     <div class="chip"> <img src="/../assets/Mentor.jpg">lvl 8 Mentor</div>
+    <% elsif current_user.xp < 10000 %>
+     <div class="chip"> <img src="/../assets/Mentor.jpg">lvl 9 Coding Jedi</div>                
+    <% else %>
+     <div class="chip"> <img src="https://img0.etsystatic.com/001/0/5326218/il_570xN.390914856_eqxh.jpg">lvl 10 Jordan Hudgens</div>   
+  <% end %>
+<% end %></li>
+
+      <li><%= link_to 'Lessons', lessons_path %></li>
+      <li><%= link_to 'Achievements', pages_achievement_path %></li>
+      <% if current_user %>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Register", new_user_registration_path %></li>
+      <% end %>
+      <li><%= render 'shared/level' if current_page?root_path %></li>
+    </ul>
+  </div>
+</nav>
