@@ -27,7 +27,7 @@ class PagesController < ApplicationController
     "click on every link" => 40,
     "download slack" => 5,
     "download screenhero" => 5 }
-    point = @achievements["Register"]
+    point = @achievements[params[:achievement]]
     if user_signed_in?
       @user = current_user
       if @user.xp == nil
