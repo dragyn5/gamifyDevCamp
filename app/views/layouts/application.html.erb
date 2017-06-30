@@ -8,7 +8,10 @@
   </head>
 
   <body>
+      <%= link_to 'sign out', destroy_user_session_path %>
+      <%= render 'shared/alerts' %>
     <%= yield %>
+    
   </body>
 </html>
 

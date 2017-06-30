@@ -56,3 +56,4 @@ gem 'devise', '~> 4.3'
 gem 'materialize-sass', '~> 0.98.2'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem "gritter", "1.2.0"
+gem 'jquery-rails'
