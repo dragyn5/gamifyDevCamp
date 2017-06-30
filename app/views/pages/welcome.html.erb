@@ -4,11 +4,5 @@
 <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>      
      
    
+<%= @person.xp %>
 
-
-<% if current_user %>
-  <% if @person.xp == nil %>
-    <% @person.xp = 0 %>
-  <% end %>
- <%= @person.xp %>
-<% end %>
