@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://rubygems.org' # ~> NoMethodError: undefined method `source' for main:Object
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.3'
 gem 'materialize-sass', '~> 0.98.2'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem "gritter", "1.2.0"
+gem 'jquery-rails'

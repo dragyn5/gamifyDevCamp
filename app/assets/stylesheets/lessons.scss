@@ -1,3 +1,26 @@
-// Place all the styles related to the lessons controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+a { text-decoration: none;
+	&:hover {
+    color: teal;
+  }
+}
+
+
+td:hover {
+	background-color: #efefef;
+}
+
+table, th, td {
+   border-top: 1px solid black;
+}
+
+th {
+	background-color: teal;
+	color: white;
+}
+
+img:hover {
+	color: #efefef;
+}
+
