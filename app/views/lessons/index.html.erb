@@ -15,8 +15,8 @@
 
   <tbody>
     <% @lessons.each do |lesson| %>
-      <tr>
-        <td><%= lesson.photo %></td>
+      <tr class="table_row">
+        <td><%= image_tag(lesson.photo) %></td>
         <td><%= lesson.title %></td>
         <td><%= lesson.subtitle %></td>
         <td><%= lesson.body %></td>
