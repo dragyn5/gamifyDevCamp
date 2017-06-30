@@ -7,13 +7,11 @@ Lesson.create!(
 	)
 end
  puts "10 video posts created"
+ 
 3.times do |topic|
   User.create!(
-    
     email: "test#{topic}@test.com",
     password: "asdfasdf"
-
-
   )
 end
 puts "3 Users created"
