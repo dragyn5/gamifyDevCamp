@@ -7,6 +7,7 @@ Lesson.create!(
 	)
 end
  puts "10 video posts created"
+ 
 3.times do |topic|
   User.create!(
     
